@@ -166,8 +166,7 @@ public class PushPlugin extends CordovaPlugin implements PushConstants {
             callbackContext.success();
         } else if (SET_CHWIN.equals(action)) {
             setChwin(data.getBoolean(0));
-            //callbackContext.success();
-            
+            callbackContext.success();
         } else if (HAS_PERMISSION.equals(action)) {
             cordova.getThreadPool().execute(new Runnable() {
                 public void run() {
