@@ -95,6 +95,20 @@ PushNotification.prototype.unregister = function(successCallback, errorCallback,
     exec(cleanHandlersAndPassThrough, errorCallback, 'PushNotification', 'unregister', [options]);
 };
 
+
+/**
+ * ALF mod
+ */
+/*
+PushNotification.prototype.setCHwin = function(b) {
+    exec(null, null, 'PushNotification', 'setChwin', [b]);
+};
+PushNotification.prototype.isInChwin = function(successFunction, errorFunction) {
+    exec(successFunction, errorFunction, 'PushNotification', 'isInChwin', []);
+};
+*/
+
+
 /**
  * Call this to set the application icon badge
  */
@@ -236,6 +250,15 @@ module.exports = {
     hasPermission: function(successCallback, errorCallback) {
         exec(successCallback, errorCallback, 'PushNotification', 'hasPermission', []);
     },
+    
+    setCHwin2: function(b) {
+        exec(null, null, 'PushNotification', 'setChwin', [b]);
+    },
+    
+    isInChwin2: function(successCallback, errorCallback) {
+        exec(successCallback, errorCallback, 'PushNotification', 'isInChwin', []);
+    },
+
 
     /**
      * PushNotification Object.
