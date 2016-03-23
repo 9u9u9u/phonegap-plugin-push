@@ -70,6 +70,10 @@ public class GCMIntentService extends GcmListenerService implements PushConstant
                 Log.d(LOG_TAG, "foreground");
                 extras.putBoolean(FOREGROUND, true);
                 PushPlugin.sendExtras(extras);
+                if (!PushPlugin.isInChwin()) {
+                    Log.d(LOG_TAG, "foregroundCh");
+                    showNotificationIfPossible(getApplicationContext(), extras);
+                }
             }
             // if we are in the foreground and forceShow is `true`, force show the notification if the data has at least a message or title
             else if (forceShow && PushPlugin.isInForeground()) {
