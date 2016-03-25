@@ -100,8 +100,8 @@ PushNotification.prototype.unregister = function(successCallback, errorCallback,
  * ALF mod
  */
 
-PushNotification.prototype.setCHwin = function(b) {
-    exec(null, null, 'PushNotification', 'setChwin', [b]);
+PushNotification.prototype.setCHwin = function(s) {
+    exec(null, null, 'PushNotification', 'setChwin', [s]);
 };
 PushNotification.prototype.isInChwin = function(successFunction, errorFunction) {
     exec(successFunction, errorFunction, 'PushNotification', 'isInChwin', []);
