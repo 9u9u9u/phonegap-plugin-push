@@ -69,6 +69,7 @@ public class GCMIntentService extends GcmListenerService implements PushConstant
             if (!forceShow && PushPlugin.isInForeground()) {
                 Log.d(LOG_TAG, "foreground");
                 extras.putBoolean(FOREGROUND, true);
+                extras.putBoolean("subpush", true);
                 PushPlugin.sendExtras(extras);
                 if (!PushPlugin.isInChwin()) {
                     Log.d(LOG_TAG, "foregroundCh");
