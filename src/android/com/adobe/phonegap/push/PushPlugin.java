@@ -166,7 +166,7 @@ public class PushPlugin extends CordovaPlugin implements PushConstants {
             callbackContext.success();
         } else if (SET_CHWIN.equals(action)) {
             try {
-                setChwin(data.getBoolean(0));
+                setChwin(data.getString(0));
                 callbackContext.success();
             } catch (JSONException e) {
                 Log.e(LOG_TAG, "SET_CHWIN: Got JSON Exception " + e.getMessage());
