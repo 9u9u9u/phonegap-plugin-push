@@ -55,4 +55,5 @@ public interface PushConstants {
     public static final String CONTENT_AVAILABLE = "content-available";
     public static final String TOPICS = "topics";
     public static final String SET_CHWIN = "setChwin";
+    public static final String USERFROM = "userfrom";
 }
