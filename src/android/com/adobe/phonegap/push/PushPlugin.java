@@ -31,7 +31,7 @@ public class PushPlugin extends CordovaPlugin implements PushConstants {
     private static CordovaWebView gWebView;
     private static Bundle gCachedExtras = null;
     private static boolean gForeground = false;
-    private static boolean gChwin = false;
+    private static String gChwin = "";
 
     /**
      * Gets the application context from cordova's main activity.
@@ -232,7 +232,7 @@ public class PushPlugin extends CordovaPlugin implements PushConstants {
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
         gForeground = true;
-        gChwin = false;
+        gChwin = "";
     }
 
     @Override
@@ -258,7 +258,7 @@ public class PushPlugin extends CordovaPlugin implements PushConstants {
         super.onDestroy();
         gForeground = false;
         gWebView = null;
-        gChwin = false;
+        gChwin = "";
     }
 
     private void subscribeToTopics(JSONArray topics, String registrationToken) {
@@ -367,8 +367,8 @@ public class PushPlugin extends CordovaPlugin implements PushConstants {
       return gChwin;
     }
 
-    public static void setChwin(boolean b) {
-      gChwin = b;
+    public static void setChwin(String s) {
+      gChwin = s;
     }
     
 }
