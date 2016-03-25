@@ -363,7 +363,7 @@ public class PushPlugin extends CordovaPlugin implements PushConstants {
         return gWebView != null;
     }
     
-    public static boolean isInChwin() {
+    public static String isInChwin() {
       return gChwin;
     }
 
