@@ -75,7 +75,8 @@ public class GCMIntentService extends GcmListenerService implements PushConstant
                     Log.d("XXXYYY", PushPlugin.isInChwin() );
                     Log.d("XXXYYY", extras.getString(USERFROM) );
                     Log.d("XXXYYY", "___________________________");
-                if (PushPlugin.isInChwin() == extras.getString(USERFROM)) {
+                //if (PushPlugin.isInChwin() == extras.getString(USERFROM)) {
+                if ( extras.getString(USERFROM).equals(PushPlugin.isInChwin()) ) {
                     Log.d(LOG_TAG, "foregroundCh");
                     PushPlugin.sendExtras(extras);
                 }else{
