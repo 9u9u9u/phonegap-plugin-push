@@ -56,4 +56,5 @@ public interface PushConstants {
     public static final String TOPICS = "topics";
     public static final String SET_CHWIN = "setChwin";
     public static final String USERFROM = "userfrom";
+    public static final String FAKECALL = "fakecall";
 }
