@@ -82,7 +82,8 @@ public class GCMIntentService extends GcmListenerService implements PushConstant
                 }else{
                     Log.d(LOG_TAG, "foregroundNoCh");
                     showNotificationIfPossible(getApplicationContext(), extras);
-                    extras.putBoolean(FAKECALL, true);
+                    //extras.putBoolean(FAKECALL, true);
+                    extras.putString("style", "FAKE");
                     PushPlugin.sendExtras(extras);
                 }
             }
